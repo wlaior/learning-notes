@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.6.3.2 (Windows)"/>
+	<meta name="created" content="2023-11-24T19:36:19.466000000"/>
+	<meta name="changed" content="2023-11-25T13:02:18.711000000"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+		a:link { color: #000080; text-decoration: underline }
+		a:visited { color: #800000; text-decoration: underline }
+	</style>
+</head>
+<body lang="zh-CN" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="4" style="font-size: 14pt"><b>盒子模型</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>盒子</b></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>4</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>层占位问题</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>盒子位置问题</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>文本位置问题</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">盒子大小不包括</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">；但是</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">会占位置</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">html</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">默认大小为视口宽，自然高</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">body</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">默认宽度为视口宽度，默认高度为自然</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">页面默认宽度为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">*</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">宽度，默认高度为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">*</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">高度</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">若</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">html</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">盒子颜色和整个页面颜色没有指定，默认按照</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">body</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">盒子的颜色；</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">不指定，</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">、</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">padding</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">默认为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">border</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">默认为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">3</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">子盒子的</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">4</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">层都占父元素内容区的位置，只是行内元素的上下</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">padding</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">有效，但不占位置，上下</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">无效；</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">第一个子元素和最后一个子元素的塌陷问题；兄弟之间的合并问题；</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">为负数会产生覆盖；元素的隐藏；</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">内容背景色作用于内容、内边距、边框</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">行内元素、行内块元素可以像文本一样调整位置</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">块元素、行内块元素的垂直问题可以用</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">来解决</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">内容溢出问题：子元素宽度或高度大于父元素时，将会溢出，且会占位置</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">塌陷也是一种溢出，说明溢出的</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">也是占位置的</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>overflow</b>:visible/hidden/scroll/auto</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>overflow-x</b>:</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>overflow-y</b>:</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>content</b></span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>height</b>:</span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>width</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：宽度不设置，默认为父容器的内容宽度；若宽度大于父容器内容宽度，则会伸出去</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>min-width</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：最小宽度</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>max-width</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：最大宽度</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>min-height</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：最小高度</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>max-height</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：最大高度</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>background</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：作用于内容、内边距、边框</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>padding</b></span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>padding-left</b>:<br/>
+<b>padding-right</b>:<br/>
+<b>padding-top</b>:<br/>
+<b>padding-button</b>:<br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>注意</b>：行内元素的上下</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">padding</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">能设置，不占位置，块元素和行内块元素占位置</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+<b>border</b></span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>border:1Opx
+dashed
+black</b><br/>
+dashed</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：虚线</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+solid:</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">实线</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+dotted</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：点线</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+double</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：双实线</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+transparent</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：透明色</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+<b>border-width</b>:<br/>
+<b>border-height</b>:<br/>
+<b>border-color</b>:<br/>
+<b>border-style</b>:</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>margin</b></span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>注意</b>：行内元素的上下</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">不能设置，更不占位置，块元素和行内块元素占位置</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+<b>margin-left</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">auto</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：表示离左边最远</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+<b>margin-right</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：
+</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">auto</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：表示离右边最远</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+margin:
+auto</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：
+表示上下左右居中</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0
+auto</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：
+表示上下为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">o</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，左右居中</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>注意</b>：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">auto</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">只对块元素和行内块元素有效，对行内元素无效</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>注意</b>：如果</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">值是负数，则会产生覆盖</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>塌陷问题</b></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">给第一人子元素设置上</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，该元素不会下移，而是父元素会下移</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">在不设置父元素高度的情况，给最后一个子元素设置下</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，会溢出</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">原因：父元素没有边框</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">1</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：给交元素设置任意非</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">边框</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">2</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：给父元素设置任意非</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0padding<br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">3</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">overflow</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">hidden</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>合并问题</b></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">上下兄弟之间的</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">会保留最大的</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">margin</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">；左右不存在</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>隐藏元素</b></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">l</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">display:none
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">不占位隐藏</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><br/>
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">2</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">visibility:hidden</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">占位隐藏</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>元素默认样式</b></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">继承的样式优先级最低，比默认都低；子元素的数据内容一般可以继承父元素，但盒子样式一般不能继承</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">超链接</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">&lt;a&gt;&lt;/a&gt;</span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">标题</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">&lt;hn&gt;&lt;//hn&gt;</span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">段落</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">&lt;p&gt;&lt;/p&gt;</span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">列表</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">&lt;ul&gt;&lt;/ul&gt;</span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">&lt;body&gt;&lt;/body&gt;</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">有默认样式，</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">padding:8px</span></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>重置默认样式</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>行内元素、行内块元素之间的空白问题</b></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">原因：产生了换行</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">1</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：不换行</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">2</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：空格也是文字，父元素内容区文字大小为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">；</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>行内块元素的幽灵空白问题</b></font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">原因：基线对齐产生，空白处就是行高</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">的下面空白</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">1</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：子元素中有行内块元素时，最好设置父元素文字大小为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，子元素中线对齐</font></font></p>
+<p style="line-height: 100%; margin-left: 0.74cm; margin-bottom: 0cm">
+<font face="新宋体, monospace"><font size="3" style="font-size: 12pt">方法</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">2</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：给行内块元素，</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">vertical-align</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">top
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">顶端对齐，或者</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">bottom
+</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">低端对齐</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">	</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="4" style="font-size: 14pt"><b>文本</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>字体</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">	...</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>颜色</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">	...</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>长度</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">	...</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>位置</b></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>文字水平居中</b>：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">text-align:center</span></font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>垂直居中</b>：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">line-height</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">..px</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，会让</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">的行高居中，而非中点居中，如果默认基线对齐，则</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">的下边缘为基线对齐位置</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>	</b></span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>注意</b>：如果父元素的文字垂直居中且大小为</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">0</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">，则中线就在中间；盒子的中线不等同于文字的中线</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>文字单行高度</b>：这个高度里面有基线，底线，中线</font></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><b>中线对齐</b>：</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">vertical-align:middle
+ </span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">该文本的中线对齐</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">的中线，这个</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">是父元素内容区的直接文本</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">；默认是基线对齐</font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt"><span lang="en-US">x</span></font></font><font face="新宋体, monospace"><font size="3" style="font-size: 12pt">的基线</font></font></p>
+</body>
+</html>
