@@ -26,8 +26,8 @@
 		
 		.learning-progess{width: 800px;  margin: 0 auto;  padding:20px 0;}
 		.tit1{line-height: 50px;  font-size:28px;  font-weight:600;  padding-bottom:30px;  color:#555; }
-		.skill{width:50%;  padding-bottom:50px; }
-		.skill .subject{font-size: 18px;  line-height:24px;  font-weight:600;  color:#333;  margin-bottom:20px; }
+		.skill{width:50%;  padding-bottom:40px; }
+		.skill .subject{font-size: 18px;  line-height:24px;  font-weight:600;  color:#333;  margin-bottom:20px;  display:flex;  justify-content:space-between }
 		.progress{width:100%;  height:7px;  border-radius:7px;  background:#ddd;  position:relative;  overflow:hidden; }
 		.progress-in{position:absolute; height:7px;  left:0;  top:0;  background:lightblue;  }
 	</style>
@@ -56,15 +56,15 @@
 		<div class="tit1">学习进度</div>
 		<div class="skill-box">
 			<div class="skill">
-				<p class="subject"><a href="./web/CSS.html">html+css</a></p>
+				<p class="subject"><a href="./web/CSS.html">html+css</a><span>10%</span></p>
 				<div class="progress">
-					<div class="progress-in" style="width:80%"></div>
+					<div class="progress-in" style="width:10%"></div>
 				</div>
 			</div>
 			<div class="skill">
-				<p class="subject"><a href="./OS/linux/linux-order.html">linux-order</a></p>
+				<p class="subject"><a href="./OS/linux/linux-order.html">linux-order</a><span>20%</span></p>
 				<div class="progress">
-					<div class="progress-in" style="width:80%"></div>
+					<div class="progress-in" style="width:20%"></div>
 				</div>
 			</div>
 		</div>
