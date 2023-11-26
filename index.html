@@ -5,31 +5,53 @@
 	<meta charset="UTF-8">
 	<meta name="Author" content="wlaior">
 	<title>wlaior space</title>
+	<script>
+		function click_button(str1){
+			if(document.querySelector(str1).style.display=='block'){
+				document.querySelector(str1).style.display='none'
+			}else {document.querySelector(str1).style.display='block'}
+		}
+	</script>
 	<style>
-		*{margin: 0;    padding: 0;}	
-		body{background: #fff;} 	 /* 333表示黑色，#555表示浅黑，fff表示白色，ddd表示灰色 */
-
-		.header{height: 80px;    width: 100%;    background: #fff;    border-bottom: 1px solid #ddd;}	
-		.nav-box{max-width: 1000px;    margin: 0 auto;   height: 40px;    padding-top: 20px;    font-size: 30px;  color: #333;  
-			display: flex;   align-items: center;   justify-content: space-between; }
-		ul{list-style: none; }
-		.nav-box .nav{display: flex;   font-size: 16px;  color: #555; }
+		*{margin: 0;    padding: 0; }	
+		body{background: #fff; } 	 /* 333表示黑色，#555表示浅黑，fff表示白色，ddd表示灰色 */
 		a{color: #333;  text-decoration: none; }
-		.nav-box .nav li{padding-left: 40px; }
-		.nav-box .nav a.on,
-		/*.nav-box .nav a:hover{color: #333;   padding-bottom: 10px;  border-bottom: 2px solid #333; }*/
-		a:hover{color: #333;   padding-bottom: 10px;  border-bottom: 2px solid #333; }
-		.nav-box .nav a.love{ font-family: "STKaiti";    color: #f584b7;}
 
-		.banner{width:1160px;  height:200px;  margin:0 auto;  background:url(./img/banner.jpg) no-repeat center center;  
-			font-size:30px;  font-weight:bold;  text-align:center;  line-height:200px;  color: #fff;  text-shadow: 0 0 10px rgba(0,0,0,0.3) }
+		.header{height: 80px;    width: 100%;    background: #fff;    border-bottom: 1px solid #ddd; }	
+		    .nav-box{max-width: 1000px;    height: 40px;     padding-top: 20px;    margin: 0 auto;    
+			  display: flex;   align-items: center;   justify-content: space-between; }
+		        .nav-box .nav-box-l{font-size: 30px;  color: #333;  }
+		        .nav-box .nav-box-r{font-size: 16px;  color: #555;  display: flex;  list-style: none;}
+		            .nav-box .nav-box-r li{padding-left: 40px; }
+			.nav-box .nav-box-r li a{color: #333;  text-decoration: none; }
+			.nav-box .nav-box-r li a.on,
+			.nav-box .nav-box-r li a:hover{border-bottom: 2px solid #333;  padding-bottom: 10px;  color: #333; }
+			.nav-box .nav-box-r li a.love{ font-family: "STKaiti";    color: #f584b7;}
 		
-		.learning-progess{width: 800px;  margin: 0 auto;  padding:20px 0;}
-		.tit1{line-height: 50px;  font-size:28px;  font-weight:600;  padding-bottom:30px;  color:#555; }
-		.skill{width:50%;  padding-bottom:40px; }
-		.skill .subject{font-size: 18px;  line-height:24px;  font-weight:600;  color:#333;  margin-bottom:20px;  display:flex;  justify-content:space-between }
-		.progress{width:100%;  height:7px;  border-radius:7px;  background:#ddd;  position:relative;  overflow:hidden; }
-		.progress-in{position:absolute; height:7px;  left:0;  top:0;  background:lightblue;  }
+		.banner{width:1160px;  height:200px;  background:url(./img/banner.jpg) no-repeat center center;  margin:0 auto;  
+		             font-size:30px;  font-weight:bold;  text-align:center;  line-height:200px;  color: #fff;  text-shadow: 0 0 10px rgba(0,0,0,0.3) }
+		
+		.learning-progess{width: 800px;  padding:20px 0;  margin: 0 auto; }
+		    .learning-progess .tit1{padding-bottom:30px;  font-size:28px;  font-weight:600;   line-height: 50px;   color:#555; }
+		    .learning-progess .skill-box{list-style: none; }
+		        .learning-progess .skill-box li ul{list-style: none; }
+		            .learning-progess .skill-box li ul li .big-module-tit{border:0;  border-color:transparent;  outline:none;  background:#fff; 
+								        padding-bottom: 30px;   font-size: 24px;   line-height:30px;   font-weight:600;   color:#555; }
+		            .learning-progess .skill-box li ul li .big-module-tit:hover{padding-bottom: 35px;  }
+		            .learning-progess .skill-box li ul li ul{}
+			.middle-module-tit{padding-left:30px;  border:0;  border-color:transparent;  outline:none;  background:#fff; 
+				        padding-bottom: 20px;   font-size: 21px;   line-height:28px;   font-weight:600;   color:#555; }
+			.middle-module-tit:hover{padding-bottom: 25px;  }
+			.small-module-tit{padding-left:60px;  border:0;  border-color:transparent;  outline:none;  background:#fff; 
+				        padding-bottom: 10px;   font-size: 18px;   line-height:24px;   font-weight:600;   color:#555; }
+			.small-module-tit:hover{padding-bottom: 15px;  }
+		       	   .subject{margin-bottom:10px;   display:flex;    justify-content:space-between; 
+				font-size: 18px;   line-height:24px;   font-weight:600;   color:#333; }
+			  .subject a:hover{padding-bottom: 10px;  color: #333; }
+		                  .progress{width:100%;  height:7px;  border-radius:7px;  background:#ddd;  position:relative;  overflow:hidden; }
+			        .progress-in{position:absolute;  height:7px;  left:0;  top:0;  background:lightblue; }
+
+		
 	</style>
 </head>
 
@@ -37,8 +59,8 @@
 	<!-- 顶部导航 -->
 	<header class="header">	
 		<div class="nav-box">
-			<span>wlaior's 学习记录</span>
-			<ul class="nav">
+			<span class="nav-box-l">wlaior's 学习记录</span>
+			<ul class="nav-box-r">
 				<li><a href="./index.html" class="on">首页</a></li>
 				<li><a href="#">关于</a></li>
 				<li><a href="#">联系</a></li>
@@ -54,22 +76,259 @@
 	<!-- 学习进度 -->
 	<div class="learning-progess">
 		<div class="tit1">学习进度</div>
-		<div class="skill-box">
-			<div class="skill">
-				<p class="subject"><a href="./web/CSS.html">html+css</a><span>10%</span></p>
-				<div class="progress">
-					<div class="progress-in" style="width:10%"></div>
-				</div>
-			</div>
-			<div class="skill">
-				<p class="subject"><a href="./OS/linux/linux-order.html">linux-order</a><span>20%</span></p>
-				<div class="progress">
-					<div class="progress-in" style="width:20%"></div>
-				</div>
-			</div>
-		</div>
+		<ul class="skill-box">
+			<li ><ul >
+				<li ><button class="big-module-tit" onclick="click_button('.basecontent')">基础模块</button></li>
+				<li><ul class="basecontent" style="display:none;">
+					<li><ul>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">离散数学</a><span>5%</span></p>
+							<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">计算机组成原理</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">计算机体系结构</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">操作系统原理</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">计算机网络原理</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">数据库原理</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">数字设计</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+					</ul></li>
+				</ul></li>
+			</ul></li>
+
+			<li ><ul >
+				<li ><button class="big-module-tit" onclick="click_button('.softbasecontent')">软件基础</button></li>
+				<li><ul class="softbasecontent" style="display:none;">
+					<li><ul>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">数据结构</a><span>5%</span></p>
+							<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">算法导论</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">软件工程</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">结构化编程</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">面向对象编程</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">设计模式</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">架构设计</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+					</ul></li>
+				</ul></li>
+			</ul></li>
+
+			<li ><ul >
+				<li ><button class="big-module-tit" onclick="click_button('.hardbasecontent')">硬件基础</button></li>
+				<li><ul class="hardbasecontent" style="display:none;">
+					<li><ul>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">电路原理</a><span>5%</span></p>
+							<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">电磁学</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">半导体器件</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">模拟电路</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">数字电路</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">微型计算机原理</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+						<li class="small-module-tit">
+							<p class="subject"><a href="#">接口技术</a><span>5%</span></p>
+								<div class="progress">
+								<div class="progress-in" style="width:5%"></div>
+							</div>
+						</li>
+					</ul></li>
+				</ul></li>
+			</ul></li>
+
+			<li ><ul >
+				<li ><button class="big-module-tit" onclick="click_button('.OSmodulecontent')">系统模块</button></li>
+				<li><ul class="OSmodulecontent" style="display:none;">
+					<li><ul>
+						<li ><button class="middle-module-tit" onclick="click_button('.Winmodulecontent')">Windows</button></li>
+						<li><ul class="Winmodulecontent" style="display:none;">
+							<li><ul>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Windows内核</a><span>5%</span></p>
+									<div class="progress">
+										<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Windows驱动</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Win32API</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Windows-Order</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Windows-Shell</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Windows-FS</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Windows注册表</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+							</ul></li>
+					</ul></li>
+					<li><ul>
+						<li ><button class="middle-module-tit" onclick="click_button('.Linuxmodulecontent')">Linux</button></li>
+						<li><ul class="Linuxmodulecontent" style="display:none;">
+							<li><ul>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Linux内核</a><span>5%</span></p>
+									<div class="progress">
+										<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Linux驱动</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">LinuxAPI</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="./OS/linux/linux-order.html">Linux-Order</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Linux-Shell</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+								<li class="small-module-tit">
+									<p class="subject"><a href="#">Linux-FS</a><span>5%</span></p>
+									<div class="progress">
+									<div class="progress-in" style="width:5%"></div>
+									</div>
+								</li>
+							</ul></li>
+					</ul></li>
+				</ul></li>
+			</ul></li>
+		</ul>
 	</div>
 	<!-- 学习进度 end -->
+	
+
+			
+
 
 </body>
 </html>
